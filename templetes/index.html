@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+	<title>Ytube analyser</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="team" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="{% static 'font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'owl.carousel.css' %}">
+     <link rel="stylesheet" href="{% static 'owl.theme.default.min.css' %}">
+
+
+    
+     <link rel="stylesheet" href="{% static 'tooplate-style.css'%}">
+
+</head>
+<body>
+
+     
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+    
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    
+                    <a href="index.html" class="navbar-brand"><img src="{%static 'js/ytube.png'%}"><span style="color:red">Y</span>tube analyser</a>
+               </div>
+
+               
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                         <li><a href="#home" class="smoothScroll">Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About us</a></li>
+                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                         
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     
+     <section id="home" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-3 col-md-6 col-sm-12">
+                         <div class="home-info">
+                              
+                              <h1>We help you analyse your search successfully!</h1>
+                              <form action="\index2" method="post" class="online-form">{% csrf_token%}
+                                   <br>
+                                   <input type="name" name="fname" class="form-control" placeholder="Enter your first name" required="">
+                                   <br><br>
+                                   <input type="name" name="lname" class="form-control" placeholder="Enter your last name" required="">  
+                                     
+                                   <br><br>
+                                   <p style="color:white" >what you wanna search for:</p> 
+                                   <br>
+                                   <input type="search" name="search" class="form-control" placeholder="Enter your search" required="">  
+                                   <button type="submit" class="form-control" >Get started</button>  
+                               </form>
+                               <div class="button-main">
+                                   <button type="submit" >Get started</button>
+                              </div>
+                              
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     
+     <section id="about" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-3 col-md-6 col-sm-12">
+                         <div class="section-title">
+                            
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         
+                              <img src="https://classroomclipart.com/images/gallery/Animations/People/monk-meditating-animated-clipart-crca.gif" class="img-responsive" alt="Andrew Orange">
+                              <div class="team-info team-thumb-up">
+                                   <h2>Voice of God </h2>
+                                          <small>Always right</small>
+                          
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+
+                              <div class="team-info team-thumb-down">
+                                   <h2>We provide you the ultimate experience of gathering certain information about  available youtube videos</h2>
+                                   <br><br>
+                                   <p>This would help you in analysing the constraint of people about a certain video and the degree of comments.Listen to the voice and tap the search bar with what makes you think! </p>
+                              </div>
+
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <section id="contact" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-1 col-md-10 col-sm-12">
+                         <form id="contact-form" role="form" action="\index3" method="post">{% csrf_token%}
+                              <div class="section-title">
+                                   <h1>Say hello to us</h1>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4">
+                                   <input type="text" class="form-control" placeholder="Enter your Full name" name="name" required="">
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <input type="email" class="form-control" placeholder="Enter your Email address" name="email" required="">
+                              </div>
+                              <div class="col-md-4 col-sm-4">
+                                   <input type="submit" class="form-control" name="send message" value="Send Message">
+                              </div>
+                              <div class="col-md-12 col-sm-12">
+                                   <textarea class="form-control" rows="8" placeholder="Your message to us" name="message" required=""></textarea>
+                              </div>
+                         </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+                         
+                              <center>
+                                        <p>Copyright &copy; 2020 - <span style="color: red">Y</span>tube analyser
+                                        </p>
+                              </center>
+
+
+                         
+
+                         <!-- <div class="col-md-6 col-sm-6">
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div> -->
+
+
+               </div>
+          </div>
+     </footer>
+
+     <script src="{%static 'js/jquery.js'%}"></script>
+    
+     <script src="{%static 'js/bootstrap.min.js'%}"></script>
+    <script src="{%static 'js/custom.js'%}"></script>
+
+</body>
+</html>
+
+

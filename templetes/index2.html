@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'hello.css'%}">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+{% for i in data%}
+<div class="card mb-3 " style="max-width: 1000px;" >
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src={{i.img_url}} class="card-img" width="700px" height="350px" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title " position="relative">{{i.title}}</h5>
+          <p class="card-text">{{i.channel}}</p>
+          <!--ma <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+          <div class="c100 p25">
+            <span>{{i.views}}</span>
+            
+               
+            <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+            </div>
+            </div>
+                
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+      <div class="box">
+          
+          <div class="chart" data-percent={{i.polarity.positive}}>{{i.polarity.positive}}%</div>
+          <h4>positive</h4>
+      </div>
+     
+     
+      <div class="box">
+          <div class="chart" data-percent={{i.polarity.negative}}>{{i.polarity.negative}}%</div>
+          <h4>negative</h4>
+      </div>               
+     
+      <div class="box">
+          <div class="chart" data-percent={{i.polarity.neutral}}>{{i.polarity.neutral}}%</div>
+          <h4>neutral</h4>
+      </div>
+    </div>
+  </div>
+    
+{%endfor%}
+
+
+</body>
+<script src="{% static 'js/jquery-3.4.1.min.js' s%}" type="text/javascript">
+</script>
+<script src="{% static 'js/hey.js' s%}" type="text/javascript"></script>
+<script src="{% static 'js/jquery.easypiechart.js' %}">
+</script>
+<script>
+    $(document).ready(function(){
+      $('.chart').easyPieChart({
+        size:155,
+        lineWidth:10,
+        barColor:'#F50E1C'
+          
+      })
+    });
+</script>
+</html>
+
