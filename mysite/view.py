@@ -9,7 +9,7 @@ def mail(request):
     message_=request.POST.get("message","not available")
     import smtplib
     gmailaddress = "frappers100@gmail.com"
-    gmailpassword = "frappers@1234"
+    gmailpassword = "******"
     mailto ='tushargoel1099@gmail.com'
     msg = f"{name_} with {email_} sharing this [[ {message_} ]] with you"
     mailServer = smtplib.SMTP('smtp.gmail.com', 587)
@@ -76,7 +76,7 @@ def hey(request):
         if(i=="***"):
             pass
         else:
-            x=requests.get(f"https://www.googleapis.com/youtube/v3/commentThreads?key=AIzaSyARiKHdZrSwHzW5BTXblAXhu8_XFIcC9Aw&textFormat=plainText&part=snippet&videoId={i}&maxResults=100")
+            x=requests.get(f"https://www.googleapis.com/youtube/v3/commentThreads?key=enteryourapikey&textFormat=plainText&part=snippet&videoId={i}&maxResults=100")
             dic=x.json()
             try:
                 length=len(dic["items"])
